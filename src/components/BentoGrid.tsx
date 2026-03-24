@@ -124,14 +124,7 @@ export default function BentoGrid() {
               description="The lowest fixed 12-month rate in Texas right now. Lock it in before it's gone — analysts expect summer prices to spike above 13¢."
               href={AFFILIATE_LINKS.best12Month}
             />
-            <DealCard
-              label="🌿 Best 100% Green Plan"
-              rate={`${RATES.greenRate}¢`}
-              term="12-Month Fixed · 100% Renewable"
-              description="Fully renewable energy at a competitive rate. Good for the planet and your wallet."
-              href={AFFILIATE_LINKS.bestGreenPlan}
-            />
-            <MarketAlertTile />
+<MarketAlertTile />
           </div>
         </div>
 
