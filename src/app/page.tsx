@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import BentoGrid from "@/components/BentoGrid";
 import ProviderBanner from "@/components/ProviderBanner";
 import SavingsCalculator from "@/components/SavingsCalculator";
@@ -8,9 +9,56 @@ import StickyCTA from "@/components/StickyCTA";
 import { CTA, NAV } from "@/lib/links";
 import Link from "next/link";
 
+export const metadata: Metadata = {
+  title: "BESTPWR — Best Texas Electricity Rates",
+  description: "Compare and shop the best Texas electricity plans. Fixed rates, no hidden fees, no variable plans. Find the lowest electricity rate in your area today.",
+  keywords: ["Texas electricity rates", "best electricity rates Texas", "cheap electricity Texas", "compare electricity plans", "ERCOT", "deregulated energy Texas", "fixed rate electricity", "lowest electricity rate Texas"],
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is it safe to switch electricity providers?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Switching providers in Texas is completely safe. Your local utility still owns and maintains the physical power lines and responds to outages. Only the company that sends your bill changes. There are no service interruptions during a transfer." }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does switching take?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Most switches complete within 1–3 business days. If you time it before your current contract expires, there are no early termination fees and no gap in service." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a fixed-rate plan?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A fixed-rate plan locks your rate per kWh for the length of your contract — typically 12 or 24 months. Your rate won't change even if the market spikes, which protects you during hot Texas summers." }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens when my contract expires?",
+      "acceptedAnswer": { "@type": "Answer", "text": "If you don't switch before your contract ends, most providers automatically move you to a month-to-month variable rate — often 30–50% higher than your fixed rate. We recommend shopping 30 days before expiration." }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there fees for switching?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Switching to a new provider is free. However, leaving your current provider before your contract ends may trigger an early termination fee (typically $100–$200). Check your current contract first." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is an ESI ID and why do I need it?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Your ESI ID (Electric Service Identifier) is a 17-digit number tied to your meter. New providers use it to locate your service point and complete the transfer. You can find it on your current bill or use our ESI Lookup tool." }
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       {/* Hero */}
       <section
         className="relative text-white py-24 px-4 overflow-hidden"
