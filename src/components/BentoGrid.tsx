@@ -114,7 +114,7 @@ export default function BentoGrid() {
         {/* ── Section 1: Today's Best Rates ── */}
         <div>
           <SectionLabel>Today&apos;s Best Rates</SectionLabel>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
             <DealCard
               featured
               badge="Price Dropped Today"
