@@ -38,6 +38,14 @@ export default function Footer() {
           <Link href={NAV.esiLookup} className="text-white/75 hover:text-white text-xs font-bold uppercase tracking-widest transition-colors">
             ESI Lookup
           </Link>
+          <a
+            href="https://signup.ironhorsepowerservices.com/Prasad"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/75 hover:text-white text-xs font-bold uppercase tracking-widest transition-colors"
+          >
+            IronHorse Power
+          </a>
           <Link
             href={NAV.shop}
             className="bg-white text-[#238C23] hover:bg-gray-100 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-lg transition-colors"
