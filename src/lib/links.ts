@@ -30,15 +30,15 @@ export const CTA = {
  */
 export const RATES = {
   /** Best available 12-month fixed rate (cents per kWh) */
-  bestRate: 7.8,
+  bestRate: 7.6,
   /** Best 100% green 12-month fixed rate (cents per kWh) */
   greenRate: 9.1,
   /** Last week's average rate for Market Alert tile */
-  lastWeekAvg: 7.9,
+  lastWeekAvg: 7.8,
   /** Week-over-week change label shown in Market Alert tile */
-  weeklyChange: "−1.3%",
+  weeklyChange: "−2.6%",
   /** Last updated — change this when you update the rates above */
-  updatedAt: "Mar 24, 2026",
+  updatedAt: "Mar 31, 2026",
 } as const;
 
 /** EnergyBot web component configuration — DO NOT modify */
