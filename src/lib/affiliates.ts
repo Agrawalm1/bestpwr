@@ -8,13 +8,13 @@ const AFFILIATE_URL = "https://www.powerhq.co/partner-app.html?utm_source=PRASAD
 
 export const AFFILIATE_LINKS = {
   /** Lowest 12-month fixed rate — featured deal */
-  best12Month: AFFILIATE_URL,
+  best12Month: "/shop",
 
   /** Best 100% green / renewable plan */
-  bestGreenPlan: AFFILIATE_URL,
+  bestGreenPlan: "/shop",
 
   /** Best no-base-fee 12-month fixed plan */
-  bestNoBaseFee: AFFILIATE_URL,
+  bestNoBaseFee: "/shop",
 } as const;
 
 /** Embedded iframe partner app — for plan comparison widget */
