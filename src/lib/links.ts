@@ -14,7 +14,7 @@ export const NAV = {
   news: "/news",
 } as const;
 
-const AFFILIATE_URL = "https://www.powerhq.co/app.html?utm_source=PRASAD_VENTURES&utm_medium=referral&utm_campaign=partners#/prasad_ventures?ftype=DEFAULT";
+const AFFILIATE_URL = "https://www.powerhq.co/partner-app.html?utm_source=PRASAD_VENTURES&utm_medium=referral&utm_campaign=partners#/prasad_ventures/zip-search?ftype=DEFAULT_PARTNER&advisor_only=true";
 
 export const CTA = {
   getStarted: AFFILIATE_URL,
