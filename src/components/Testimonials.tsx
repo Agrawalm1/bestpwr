@@ -1,6 +1,6 @@
 const TESTIMONIALS = [
   {
-    quote: "I had no idea I was on a holdover rate paying 14¢/kWh. BESTPWR found me a 12-month fixed plan at 7.9¢ in about 5 minutes. Switching was completely painless.",
+    quote: "I had no idea I was on a holdover rate paying 14¢/kWh. BESTPWR found me a 12-month fixed plan at 7.2¢ in about 5 minutes. Switching was completely painless.",
     name: "Marcus T.",
     location: "Dallas, TX",
     saving: "Saving $180/yr",

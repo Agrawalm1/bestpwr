@@ -4,23 +4,23 @@
 
 const STATIC_FALLBACK = [
   {
-    date: "Mar 2026",
+    date: "Apr 2026",
     headline: "Texas electricity demand set to soar to 218GW by 2031 as data centers fuel record grid load.",
     href: "https://www.datacenterdynamics.com/en/news/ercot-electricity-demand-in-texas-set-to-soar-to-218gw-by-2031-fueled-by-data-center-growth/",
   },
   {
-    date: "Feb 2026",
+    date: "Apr 2026",
     headline: "ERCOT workshops new framework for handling power requests from data centers and large loads.",
     href: "https://www.kltv.com/2026/02/27/ercot-workshops-how-support-power-requests-data-centers/",
   },
   {
-    date: "Jan 2026",
+    date: "Apr 2026",
     headline: "EIA warns data center demand could raise ERCOT power prices by up to 79% without grid investment.",
     href: "https://www.eia.gov/todayinenergy/detail.php?id=65844",
   },
   {
-    date: "Jan 2026",
-    headline: "Fixed-rate plans still well below average — experts say lock in now before summer demand spike.",
+    date: "Apr 2026",
+    headline: "Summer is coming — analysts urge Texas households to lock in fixed rates before peak demand drives prices above 13¢.",
     href: "https://electricityplans.com/texas-electricity-trends/",
   },
 ];

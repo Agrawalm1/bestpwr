@@ -103,7 +103,7 @@ export default function Home() {
           {/* Social proof stats */}
           <div className="mt-12 pt-8 border-t border-white/20 w-full flex flex-wrap justify-center gap-8 sm:gap-16">
             {[
-              { value: "10,000+", label: "Texas households served" },
+              { value: "10,000+", label: "Texans helped through our network" },
               { value: "$200",    label: "Avg. annual savings" },
               { value: "100+",    label: "Plans compared" },
               { value: "4.8 ★",  label: "Customer rating" },
