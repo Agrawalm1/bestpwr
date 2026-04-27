@@ -18,7 +18,7 @@ const deals: Deal[] = [
     badge: "Price Dropped Today",
     label: "🏆 Best 12-Month Rate",
     provider: "Best Available Plan",
-    rate: "7.9¢",
+    rate: "7.2¢",
     rateUnit: "per kWh",
     term: "12-Month Fixed",
     description:
