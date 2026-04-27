@@ -12,6 +12,7 @@ export const NAV = {
   shop: "/shop",
   esiLookup: "/esi-lookup",
   news: "/news",
+  tips: "/tips",
 } as const;
 
 const AFFILIATE_URL = "https://www.powerhq.co/partner-app.html?utm_source=PRASAD_VENTURES&utm_medium=referral&utm_campaign=partners#/prasad_ventures?ftype=DEFAULT_PARTNER&advisor_only=true";

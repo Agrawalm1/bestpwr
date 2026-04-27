@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { NAV, CTA } from "@/lib/links";
 
 const NAV_LINKS = [
+  { label: "Tips", href: NAV.tips },
   { label: "About", href: NAV.about },
   { label: "Contact", href: NAV.contact },
 ];
