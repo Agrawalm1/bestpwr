@@ -69,23 +69,59 @@ const TIPS = [
 export default function TipsPage() {
   return (
     <main className="max-w-3xl mx-auto px-4 py-14">
-      <h1 className="text-3xl font-black text-slate-800 mb-2">Texas Electricity Tips</h1>
-      <p className="text-slate-500 mb-10">
-        Practical guides to help you pay less for electricity in Texas — without the jargon.
-      </p>
+      {/* Header */}
+      <div id="top">
+        <h1 className="text-3xl font-black text-slate-800 mb-2">Texas Electricity Tips</h1>
+        <p className="text-slate-500 mb-8">
+          Practical guides to help you pay less for electricity in Texas — without the jargon.
+        </p>
+      </div>
 
-      <div className="flex flex-col gap-12">
-        {TIPS.map((tip) => (
-          <article key={tip.id} id={tip.id} className="scroll-mt-20">
+      {/* Table of contents */}
+      <nav className="rounded-2xl border border-slate-200 bg-slate-50 p-6 mb-12">
+        <p className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">In this guide</p>
+        <ol className="flex flex-col gap-2">
+          {TIPS.map((tip, i) => (
+            <li key={tip.id} className="flex items-start gap-3">
+              <span className="shrink-0 w-5 h-5 rounded-full bg-[#238C23] text-white text-xs font-bold flex items-center justify-center mt-0.5">
+                {i + 1}
+              </span>
+              <a
+                href={`#${tip.id}`}
+                className="text-sm text-slate-700 hover:text-[#238C23] font-medium transition-colors leading-snug"
+              >
+                {tip.title}
+              </a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+
+      {/* Articles */}
+      <div className="flex flex-col gap-10">
+        {TIPS.map((tip, i) => (
+          <article key={tip.id} id={tip.id} className="scroll-mt-24">
             <div className="rounded-2xl border border-slate-200 bg-white/80 backdrop-blur-md p-7">
-              <h2 className="text-xl font-black text-slate-800 mb-1">{tip.title}</h2>
-              <p className="text-sm text-[#238C23] font-semibold mb-5">{tip.summary}</p>
-              <div className="flex flex-col gap-3">
-                {tip.body.map((paragraph, i) => (
-                  <p key={i} className="text-sm text-slate-600 leading-relaxed">
+              {/* Article header */}
+              <div className="flex items-center gap-3 mb-3">
+                <span className="shrink-0 w-7 h-7 rounded-full bg-[#238C23] text-white text-xs font-bold flex items-center justify-center">
+                  {i + 1}
+                </span>
+                <h2 className="text-lg font-black text-slate-800 leading-snug">{tip.title}</h2>
+              </div>
+              <p className="text-sm text-[#238C23] font-semibold mb-5 pl-10">{tip.summary}</p>
+              <div className="flex flex-col gap-3 pl-10">
+                {tip.body.map((paragraph, j) => (
+                  <p key={j} className="text-sm text-slate-600 leading-relaxed">
                     {paragraph}
                   </p>
                 ))}
+              </div>
+              {/* Back to top */}
+              <div className="mt-6 pt-5 border-t border-slate-100 pl-10">
+                <a href="#top" className="text-xs text-slate-400 hover:text-[#238C23] font-semibold transition-colors">
+                  ↑ Back to top
+                </a>
               </div>
             </div>
           </article>
