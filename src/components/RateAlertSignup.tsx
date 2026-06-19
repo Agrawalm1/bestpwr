@@ -4,6 +4,7 @@ import { useState } from "react";
 
 export default function RateAlertSignup() {
   const [email, setEmail] = useState("");
+  const [zip, setZip] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -12,11 +13,10 @@ export default function RateAlertSignup() {
     if (!email.trim()) return;
     setLoading(true);
     try {
-      // Replace FORMSPREE_FORM_ID with your ID from formspree.io/dashboard
       const res = await fetch("https://formspree.io/f/mlgpvwzy", {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({ email, _subject: "New Rate Alert Signup — BESTPWR" }),
+        body: JSON.stringify({ email, zip, _subject: "New Rate Alert Signup — BESTPWR" }),
       });
       if (res.ok) {
         setSubmitted(true);
@@ -40,31 +40,43 @@ export default function RateAlertSignup() {
           Get notified when rates drop.
         </h2>
         <p className="text-sm text-white/70 mb-8">
-          We monitor Texas electricity rates daily. Enter your email and we&apos;ll alert you when a better deal becomes available in your area.
+          We monitor Texas electricity rates daily. Enter your email and ZIP — we&apos;ll alert you when a better deal hits your area.
         </p>
 
         {submitted ? (
           <div className="bg-white/10 border border-white/20 rounded-2xl px-6 py-8">
             <p className="text-2xl mb-2">✅</p>
             <p className="text-white font-bold text-lg">You&apos;re on the list.</p>
-            <p className="text-white/65 text-sm mt-1">We&apos;ll email you when rates drop in Texas.</p>
+            <p className="text-white/65 text-sm mt-1">We&apos;ll email you when rates drop in your area.</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
-            <input
-              type="email"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email address"
-              className="flex-1 rounded-xl px-4 py-3 text-sm text-gray-900 bg-white/90 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50"
-            />
+          <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <input
+                type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Email address"
+                className="sm:col-span-2 rounded-xl px-4 py-3 text-sm text-gray-900 bg-white/90 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50"
+              />
+              <input
+                type="text"
+                inputMode="numeric"
+                pattern="[0-9]{5}"
+                maxLength={5}
+                value={zip}
+                onChange={(e) => setZip(e.target.value.replace(/\D/g, ""))}
+                placeholder="ZIP code"
+                className="rounded-xl px-4 py-3 text-sm text-gray-900 bg-white/90 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50"
+              />
+            </div>
             <button
               type="submit"
               disabled={loading}
-              className="shrink-0 bg-[#238C23] hover:bg-[#1a6b1a] disabled:bg-[#238C23]/50 text-white font-bold px-6 py-3 rounded-xl transition-colors text-sm whitespace-nowrap"
+              className="w-full bg-[#238C23] hover:bg-[#1a6b1a] disabled:bg-[#238C23]/50 text-white font-bold px-6 py-3 rounded-xl transition-colors text-sm"
             >
-              {loading ? "Subscribing…" : "Alert Me →"}
+              {loading ? "Subscribing…" : "Alert Me When Rates Drop →"}
             </button>
           </form>
         )}

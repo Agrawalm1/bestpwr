@@ -36,7 +36,7 @@ export default function Navbar() {
             "
             sizes="(max-width: 479px) 98vw, (max-width: 767px) 99vw, (max-width: 1862px) 100vw, 1862px"
             alt="BESTPWR"
-            loading="lazy"
+            loading="eager"
             style={{ height: "36px", width: "auto" }}
           />
         </Link>

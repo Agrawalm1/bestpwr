@@ -46,6 +46,14 @@ export default function Footer() {
           >
             IronHorse Power
           </a>
+          <a
+            href="https://www.apge.com/partners/bestpwr/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white/75 hover:text-white text-xs font-bold uppercase tracking-widest transition-colors"
+          >
+            AP Gas & Electric
+          </a>
           <Link
             href={NAV.shop}
             className="bg-white text-[#238C23] hover:bg-gray-100 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-lg transition-colors"
@@ -57,7 +65,7 @@ export default function Footer() {
 
       {/* Copyright */}
       <div className="border-t border-white/20 text-center py-4">
-        <p className="text-xs text-white/50">Copyright © 2024 BESTPWR</p>
+        <p className="text-xs text-white/50">Copyright © 2026 BESTPWR</p>
       </div>
     </footer>
   );
