@@ -95,7 +95,7 @@ function MarketAlertTile() {
       </div>
       <div className="mt-5 rounded-xl bg-[#238C23]/8 border border-[#238C23]/20 p-3">
         <p className="text-xs text-[#238C23] font-semibold leading-snug">
-          ⚡ Summer demand typically pushes prices above 13¢ in June. Now is a good time to lock in.
+          ⚡ Fall rates are easing post-summer. Lock in now before winter heating demand pushes prices back up in Dec–Jan.
         </p>
       </div>
     </Tile>

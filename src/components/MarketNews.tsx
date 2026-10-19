@@ -4,24 +4,24 @@
 
 const STATIC_FALLBACK = [
   {
-    date: "Apr 2026",
-    headline: "Texas electricity demand set to soar to 218GW by 2031 as data centers fuel record grid load.",
+    date: "Oct 2026",
+    headline: "ERCOT reports Texas grid handled record summer 2026 demand without major outages — new capacity additions credited.",
+    href: "https://www.eia.gov/todayinenergy/",
+  },
+  {
+    date: "Oct 2026",
+    headline: "Texas electricity rates easing post-summer but analysts warn winter heating demand could push prices back above 14¢ by December.",
+    href: "https://electricityplans.com/texas-electricity-trends/",
+  },
+  {
+    date: "Sep 2026",
+    headline: "Data center buildout in Texas accelerates — ERCOT projects 30GW of new large-load interconnection requests through 2028.",
     href: "https://www.datacenterdynamics.com/en/news/ercot-electricity-demand-in-texas-set-to-soar-to-218gw-by-2031-fueled-by-data-center-growth/",
   },
   {
-    date: "Apr 2026",
-    headline: "ERCOT workshops new framework for handling power requests from data centers and large loads.",
-    href: "https://www.kltv.com/2026/02/27/ercot-workshops-how-support-power-requests-data-centers/",
-  },
-  {
-    date: "Apr 2026",
-    headline: "EIA warns data center demand could raise ERCOT power prices by up to 79% without grid investment.",
+    date: "Sep 2026",
+    headline: "EIA: Texas residential electricity prices up 8% year-over-year as grid investment costs flow through to consumers.",
     href: "https://www.eia.gov/todayinenergy/detail.php?id=65844",
-  },
-  {
-    date: "Apr 2026",
-    headline: "Summer is coming — analysts urge Texas households to lock in fixed rates before peak demand drives prices above 13¢.",
-    href: "https://electricityplans.com/texas-electricity-trends/",
   },
 ];
 
